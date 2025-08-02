@@ -30,6 +30,8 @@ const cardsButton = document.querySelectorAll(".prodotto a")
 const img = document.querySelectorAll(".prodotto img")
 const removeButton = document.getElementById("removeImg")
 const addButton = document.getElementById("addImg")
+const randomText = document.getElementById("changeColorText")
+const price = document.querySelectorAll(".prodotto h6")
 
 
 
@@ -56,16 +58,33 @@ function changeAdress() {
 function adressRestore() {
     footerAdress.innerText = ("Via dei mille SAVA(TA) 74028 ")
 }
-function remove(){
-    img.forEach(imagine =>{
+function remove() {
+    img.forEach(imagine => {
         imagine.classList.add("remove")
     })
 }
-function add(){
-    img.forEach(imagine1 =>{
+function add() {
+    img.forEach(imagine1 => {
         imagine1.classList.add("add")
     })
 }
+
+const getRandomColor = function () {
+    const red = Math.round(Math.random() * 255)
+    const green = Math.round(Math.random() * 255)
+    const blue = Math.round(Math.random() * 255)
+
+    return 'rgb(' + red + ', ' + green + ', ' + blue + ')'
+  }
+
+    function setRandomColor(){
+      const randomColor = getRandomColor()
+      for(let i = 0; i < price.length; i++){
+        let singlePrice = price[i]
+        singlePrice.style.color = randomColor
+      }
+
+    }
 
 
 
@@ -93,12 +112,15 @@ footerAdress.addEventListener("mouseleave", () => {
     adressRestore()
 })
 
-removeButton.addEventListener("click", () =>{
+removeButton.addEventListener("click", () => {
     remove()
 })
-addButton.addEventListener("click", () =>{
+addButton.addEventListener("click", () => {
     add()
 })
 
+randomText.addEventListener("click", () => {
+    setRandomColor()
+})
 
-    
+
