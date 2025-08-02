@@ -27,9 +27,12 @@ const titlePage = document.getElementById("title")
 const changeBackgroundBtn = document.getElementById("changeBackground")
 const footerAdress = document.querySelector("footer h5")
 const cardsButton = document.querySelectorAll(".prodotto a")
-const img = document.querySelectorAll("prodotto img")
-const buttonImg = document.getElementById("visibilityImg")
-const buttonImgRemove = document.getElementById("removeImg")
+const img = document.querySelectorAll(".prodotto img")
+const removeButton = document.getElementById("removeImg")
+const addButton = document.getElementById("addImg")
+
+
+
 
 
 
@@ -53,24 +56,15 @@ function changeAdress() {
 function adressRestore() {
     footerAdress.innerText = ("Via dei mille SAVA(TA) 74028 ")
 }
-
-function addClass() {
-
-    img.forEach(imagine => {
-       
-        imagine.classList.add("add")
-        console.log(imagine)
-        
-    })
-
-}
-
-function removeClass() {
-    img.forEach(imagine => {
+function remove(){
+    img.forEach(imagine =>{
         imagine.classList.add("remove")
     })
-
-
+}
+function add(){
+    img.forEach(imagine1 =>{
+        imagine1.classList.add("add")
+    })
 }
 
 
@@ -99,10 +93,12 @@ footerAdress.addEventListener("mouseleave", () => {
     adressRestore()
 })
 
-buttonImg.addEventListener("click", ()=>{
-    addClass()
+removeButton.addEventListener("click", () =>{
+    remove()
+})
+addButton.addEventListener("click", () =>{
+    add()
+})
 
-})
-buttonImgRemove.addEventListener("click",()=>{
-    removeClass()
-})
+
+    
