@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.anotherbody{
+background-color: rgb(54, 110, 159);
+    
+}
+h1 {
+    padding: 20px;
+    text-align: center;
+    color: red;
+}
+
+
+section {
+    display: flex;
+   
+    gap: 30px;
+    border: 1px solid black;
+    border-width: 1px;
+    justify-content: center;
+   
+
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+
+}
+
+.prodotto {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 20%;
+    border-right: 1px solid black;
+    padding: 15px;
+    max-width: 250%;
+
+
+}
+
+h6 {
+   
+    font-size: 20px;
+    color: red;
+}
+
+.prodotto h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+}
+.comment{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    justify-content: center;
+}
+input[type=text]:focus {
+    background-color: lightblue;
+}
+.add{
+
+    display: block;
+}
+.remove{
+    display: none;
+}
+
