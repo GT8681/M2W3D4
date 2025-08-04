@@ -58,14 +58,17 @@ function changeAdress() {
 function adressRestore() {
     footerAdress.innerText = ("Via dei mille SAVA(TA) 74028 ")
 }
+
+/*
 function remove() {
     img.forEach(imagine => {
         imagine.classList.add("remove")
     })
 }
+  */  
 function add() {
     img.forEach(imagine1 => {
-        imagine1.classList.add("add")
+        imagine1.classList.toggle("remove")
     })
 }
 
